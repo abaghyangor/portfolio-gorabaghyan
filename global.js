@@ -22,9 +22,8 @@ const pages = [
   { url: 'https://github.com/abaghyangor', title: 'GitHub' },
 ];
 
-const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-  ? "/"
-  : "/portfolio-lab01-dsc-106/";
+// global.js lives at the site root, so its URL gives us the correct base path
+const BASE_PATH = new URL('.', import.meta.url).pathname;
 
 
 let nav = document.createElement("nav");
