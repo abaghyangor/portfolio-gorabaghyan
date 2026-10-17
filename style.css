@@ -1,6 +1,7 @@
 html {
-  --color-accent: oklch(0.8067 0.1061 154.59);
+  --color-accent: oklch(0.8067 0.1061 154.59 / 40%);
   accent-color: var(--color-accent);
+  color-scheme: light dark;
 }
 
 body {
@@ -13,12 +14,20 @@ body {
   padding: 2ch;
 }
 
+.color-scheme {
+  position: absolute;
+  top: 2em;
+  right: 3em;
+  font: inherit;
+  font-size: 80%;
+}
+
 nav {
   display: flex;
   margin-bottom: 2ch;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+  border-bottom-color: oklch(50% 10% 200 / 40%);
 }
 
 nav a {
@@ -39,7 +48,7 @@ nav a:hover {
 nav .current {
   border-bottom-width: 0.4em;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+  border-bottom-color: oklch(50% 10% 200 / 40%);
   padding-bottom: 0.1em;
 }
 
@@ -61,6 +70,7 @@ button {
 
 input,
 textarea,
+select,
 button {
   font: inherit;
 }
