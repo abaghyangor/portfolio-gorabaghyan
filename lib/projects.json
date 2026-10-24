@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Personal Portfolio Foundation",
+    "year": 2026,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Created a multi-page personal portfolio with semantic HTML, a resume, a project gallery, and a contact form."
+  },
+  {
+    "title": "Responsive CSS Portfolio",
+    "year": 2026,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Styled the portfolio with responsive layouts, Flexbox navigation, CSS Grid, subgrid, and a consistent accent color."
+  },
+  {
+    "title": "Interactive JavaScript Portfolio",
+    "year": 2026,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Added reusable navigation, active-page highlighting, a persistent theme switcher, and an improved contact form with JavaScript."
+  },
+  {
+    "title": "Data-Driven Project Gallery",
+    "year": 2026,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Loaded project information from JSON and rendered reusable project cards with JavaScript modules."
+  },
+  {
+    "title": "AI Mathematical Olympiad",
+    "year": 2026,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built an agentic inference pipeline with a locally served 120B-parameter model, tool-augmented reasoning, and weighted-entropy aggregation, placing in the top 4% globally in Kaggle AIMO-3."
+  },
+  {
+    "title": "PokeAgent - Reinforcement Learning Agent",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Developed a reinforcement learning agent for strategic multi-agent Pokemon battles and achieved a Top 10 global placement in the NeurIPS 2025 Speedrun Track."
+  },
+  {
+    "title": "Beetle-Based Climate ML Model",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built a machine-learning model that used beetle populations to predict soil-condition changes, winning the UCSD SMASH Hackathon and placing sixth nationally."
+  },
+  {
+    "title": "CUREBench - Multi-Agent Medical Reasoning",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Created a multi-agent healthcare question-answering system with specialized routing and structured GPT-4o prompting, achieving 84.5% validation accuracy and a Top 25% finish."
+  },
+  {
+    "title": "Digital You - Agentic AI App",
+    "year": 2026,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built an identity-aware AI agent integrating Gmail and Google Calendar, with style-aware drafting, configurable approval rules, and a traceable activity timeline."
+  },
+  {
+    "title": "TweetLike - Who Said That?",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Created a quiz-style NLP application that classifies a user's tweet by celebrity voice using TF-IDF and logistic regression, with interpretable keyword contributions."
+  },
+  {
+    "title": "Home Price Prediction",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Compared linear regression, random forest, and XGBoost models for predicting residential property prices from historical transaction data."
+  },
+  {
+    "title": "Fake News Detection",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Prepared a text dataset and evaluated classification models for identifying potentially misleading news content."
+  }
+]

@@ -97,6 +97,23 @@ img {
   margin: 0;
 }
 
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 0.5em;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-weight: bold;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin: 0;
+}
+
 h1 {
   font-size: 400%;
 }
