@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <link rel="stylesheet" href="../style.css?v=4">
-    <script type="module" src="../global.js?v=4"></script>
-    <script type="module" src="projects.js?v=4"></script>
+    <link rel="stylesheet" href="../style.css?v=5">
+    <script type="module" src="../global.js?v=5"></script>
+    <script type="module" src="projects.js?v=5"></script>
 </head>
 <body>
     <h1 class="projects-title">My Projects</h1>
+    <div class="projects-visualization">
+        <svg
+            id="projects-pie-plot"
+            viewBox="-50 -50 100 100"
+            role="img"
+            aria-label="Projects grouped by year"
+        ></svg>
+        <ul class="legend" aria-label="Project years"></ul>
+    </div>
+    <input
+        class="searchBar"
+        type="search"
+        aria-label="Search projects"
+        placeholder="Search projects..."
+    >
     <div class="projects">
         <!-- Dynamically added content will appear here -->
     </div>
