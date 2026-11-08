@@ -1,4 +1,4 @@
-import { fetchJSON, renderProjects, fetchGitHubData } from './global.js?v=4';
+import { fetchJSON, renderProjects, fetchGitHubData } from './global.js?v=6';
 
 const projects = (await fetchJSON('./lib/projects.json')) ?? [];
 const latestProjects = projects.slice(0, 3);

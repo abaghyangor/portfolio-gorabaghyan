@@ -24,6 +24,7 @@ body {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 2ch;
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -263,4 +264,141 @@ h6 {
 
 .resume li {
   margin-block: 0.4em;
+}
+
+/* Lab 6: codebase meta-analysis */
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
+  gap: 1em;
+  margin: 0;
+}
+
+.stat-item {
+  padding: 1em;
+  border: 1px solid oklch(50% 10% 200 / 30%);
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+.stat-item dt {
+  color: oklch(55% 3% 200);
+  font-size: 0.85em;
+}
+
+.stat-item dd {
+  margin: 0.25em 0 0;
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+#chart {
+  margin-block: 1em;
+}
+
+#chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.gridlines line {
+  stroke: currentColor;
+  stroke-opacity: 0.12;
+}
+
+.gridlines .domain {
+  display: none;
+}
+
+.dots circle {
+  cursor: help;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: 200ms;
+}
+
+.dots circle:hover,
+.dots circle:focus-visible {
+  transform: scale(1.5);
+  outline: none;
+}
+
+.dots circle.selected {
+  fill: #ff6b6b;
+  stroke: CanvasText;
+  stroke-width: 2;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em 0.75em;
+  margin: 0;
+  transition-duration: 200ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info dt {
+  color: oklch(55% 3% 200);
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 10;
+  max-width: min(24em, calc(100vw - 2em));
+  padding: 0.8em 1em;
+  border: 1px solid oklch(50% 10% 200 / 30%);
+  border-radius: 0.5em;
+  background: Canvas;
+  box-shadow: 0 0.5em 1.5em oklch(0% 0 0 / 20%);
+}
+
+dl.info[hidden] {
+  display: grid;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+#chart .selection {
+  fill: var(--color-accent);
+  fill-opacity: 0.2;
+  stroke: currentColor;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+#selection-count {
+  font-weight: 700;
+}
+
+#language-breakdown {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35em 1em;
+  width: fit-content;
+}
+
+#language-breakdown dt {
+  color: oklch(55% 3% 200);
+}
+
+#language-breakdown dd {
+  margin: 0;
 }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codebase Meta Analysis</title>
+    <link rel="stylesheet" href="../style.css?v=6">
+    <script type="module" src="../global.js?v=6"></script>
+    <script type="module" src="main.js?v=6"></script>
+</head>
+<body class="meta-page">
+    <h1>Codebase Meta Analysis</h1>
+    <p>
+        This page explores the code and Git history behind this portfolio. Each dot below
+        represents a commit that still contributes lines to the current codebase.
+    </p>
+
+    <section aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Summary</h2>
+        <div id="stats"></div>
+    </section>
+
+    <section aria-labelledby="commits-heading">
+        <h2 id="commits-heading">Commits by time of day</h2>
+        <p>Hover over a dot for details, or drag across the chart to select commits.</p>
+        <div id="chart" aria-label="Scatterplot of commits by date and time of day"></div>
+        <p id="selection-count" aria-live="polite">No commits selected</p>
+        <dl id="language-breakdown" class="stats" aria-live="polite"></dl>
+    </section>
+
+    <dl id="commit-tooltip" class="info tooltip" hidden>
+        <dt>Commit</dt>
+        <dd><a href="" id="commit-link" target="_blank" rel="noreferrer"></a></dd>
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+        <dt>Time</dt>
+        <dd id="commit-time"></dd>
+        <dt>Author</dt>
+        <dd id="commit-author"></dd>
+        <dt>Lines edited</dt>
+        <dd id="commit-lines"></dd>
+    </dl>
+</body>
+</html>

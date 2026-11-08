@@ -1,4 +1,4 @@
-import { fetchJSON, renderProjects } from '../global.js?v=5';
+import { fetchJSON, renderProjects } from '../global.js?v=6';
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 const projects = (await fetchJSON('../lib/projects.json')) ?? [];
