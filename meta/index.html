@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codebase Meta Analysis</title>
-    <link rel="stylesheet" href="../style.css?v=6">
-    <script type="module" src="../global.js?v=6"></script>
-    <script type="module" src="main.js?v=6"></script>
+    <link rel="stylesheet" href="../style.css?v=8">
+    <script type="module" src="../global.js?v=7"></script>
+    <script type="module" src="main.js?v=8"></script>
 </head>
 <body class="meta-page">
     <h1>Codebase Meta Analysis</h1>
@@ -20,12 +20,39 @@
         <div id="stats"></div>
     </section>
 
+    <section class="timeline-controls" aria-labelledby="timeline-heading">
+        <h2 id="timeline-heading">Repository timeline</h2>
+        <label for="commit-progress">
+            <span>Show commits until:</span>
+            <input id="commit-progress" type="range" min="0" max="100" value="100">
+            <time id="commit-time"></time>
+        </label>
+    </section>
+
     <section aria-labelledby="commits-heading">
-        <h2 id="commits-heading">Commits by time of day</h2>
-        <p>Hover over a dot for details, or drag across the chart to select commits.</p>
-        <div id="chart" aria-label="Scatterplot of commits by date and time of day"></div>
-        <p id="selection-count" aria-live="polite">No commits selected</p>
-        <dl id="language-breakdown" class="stats" aria-live="polite"></dl>
+        <h2 id="commits-heading">Commits by date and time of day</h2>
+        <p>
+            Scroll through the commit story to update the plot, or use the timeline above.
+            Hover over a dot for details and drag across the chart to select commits.
+        </p>
+
+        <div id="scrolly-1">
+            <div id="scatter-story" aria-label="Commit history narrative"></div>
+            <div id="scatter-plot">
+                <div id="chart" aria-label="Scatterplot of commits by date and time of day"></div>
+                <p id="selection-count" aria-live="polite">No commits selected</p>
+                <dl id="language-breakdown" class="stats" aria-live="polite"></dl>
+            </div>
+        </div>
+    </section>
+
+    <section aria-labelledby="files-heading">
+        <h2 id="files-heading">The race for the biggest file</h2>
+        <p>
+            Each dot represents one line in the filtered codebase. Colors distinguish
+            the technologies used in each file.
+        </p>
+        <dl id="files" aria-live="polite"></dl>
     </section>
 
     <dl id="commit-tooltip" class="info tooltip" hidden>
@@ -34,7 +61,7 @@
         <dt>Date</dt>
         <dd id="commit-date"></dd>
         <dt>Time</dt>
-        <dd id="commit-time"></dd>
+        <dd id="commit-tooltip-time"></dd>
         <dt>Author</dt>
         <dd id="commit-author"></dd>
         <dt>Lines edited</dt>

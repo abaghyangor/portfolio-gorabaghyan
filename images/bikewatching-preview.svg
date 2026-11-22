@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="title desc">
+  <title id="title">Bikewatching project preview</title>
+  <desc id="desc">A stylized street map with bike lanes and station traffic circles.</desc>
+  <rect width="800" height="480" rx="24" fill="#e9efed"/>
+  <g fill="none" stroke="#bdc9c5" stroke-width="8" opacity=".85">
+    <path d="M-20 80C150 30 210 150 390 105S650 20 840 75"/>
+    <path d="M35 430C130 280 235 335 320 210S530 105 765 205"/>
+    <path d="M90-20C120 145 250 165 220 510"/>
+    <path d="M510-30C470 115 590 250 540 510"/>
+    <path d="M710-20C625 125 720 330 655 520"/>
+  </g>
+  <g fill="none" stroke="#21a366" stroke-width="9" stroke-linecap="round" opacity=".85">
+    <path d="M15 350C160 250 250 285 390 190S610 155 785 85"/>
+    <path d="M105 20C160 155 325 155 385 330S590 440 760 350"/>
+  </g>
+  <g stroke="#fff" stroke-width="4" opacity=".82">
+    <circle cx="150" cy="300" r="29" fill="steelblue"/>
+    <circle cx="265" cy="255" r="18" fill="#9b7682"/>
+    <circle cx="390" cy="190" r="39" fill="darkorange"/>
+    <circle cx="515" cy="175" r="24" fill="steelblue"/>
+    <circle cx="620" cy="135" r="31" fill="#9b7682"/>
+    <circle cx="680" cy="350" r="20" fill="darkorange"/>
+  </g>
+  <rect x="28" y="28" width="292" height="76" rx="16" fill="#152021" opacity=".9"/>
+  <text x="52" y="62" fill="white" font-family="system-ui,sans-serif" font-size="25" font-weight="700">Bikewatching</text>
+  <text x="52" y="88" fill="#d8e5e0" font-family="system-ui,sans-serif" font-size="16">Boston bike traffic explorer</text>
+</svg>

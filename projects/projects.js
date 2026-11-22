@@ -1,7 +1,7 @@
-import { fetchJSON, renderProjects } from '../global.js?v=6';
+import { fetchJSON, renderProjects } from '../global.js?v=7';
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
-const projects = (await fetchJSON('../lib/projects.json')) ?? [];
+const projects = (await fetchJSON('../lib/projects.json?v=7')) ?? [];
 const projectsContainer = document.querySelector('.projects');
 const projectsTitle = document.querySelector('.projects-title');
 const searchInput = document.querySelector('.searchBar');

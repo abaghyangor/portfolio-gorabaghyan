@@ -110,6 +110,10 @@ img {
   font-style: italic;
 }
 
+.project-link {
+  font-weight: 650;
+}
+
 .projects-visualization {
   display: flex;
   align-items: center;
@@ -317,6 +321,11 @@ h6 {
   transform-box: fill-box;
   transform-origin: center;
   transition: 200ms;
+
+  @starting-style {
+    r: 0;
+    opacity: 0;
+  }
 }
 
 .dots circle:hover,
@@ -401,4 +410,164 @@ dl.info[hidden]:not(:hover, :focus-within) {
 
 #language-breakdown dd {
   margin: 0;
+}
+
+/* Lab 8: animation and scrollytelling */
+.meta-page {
+  max-width: 140ch;
+}
+
+.timeline-controls label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em 1em;
+  padding: 1em;
+  border: 1px solid oklch(50% 10% 200 / 30%);
+  border-radius: 0.5em;
+}
+
+#commit-progress {
+  min-width: min(22em, 100%);
+  flex: 1;
+}
+
+#commit-time {
+  margin-left: auto;
+  font-weight: 700;
+}
+
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+#scatter-story,
+#scatter-plot {
+  flex: 1;
+  min-width: 0;
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 1rem;
+  height: 72vh;
+}
+
+#scatter-plot #chart {
+  margin-top: 0;
+}
+
+#scatter-story .step {
+  box-sizing: border-box;
+  min-height: 65vh;
+  margin-bottom: 1rem;
+  padding: 1.25em;
+  border-left: 0.3em solid transparent;
+  border-radius: 0 0.5em 0.5em 0;
+  color: color-mix(in oklch, CanvasText 65%, Canvas);
+  transition: 200ms;
+}
+
+#scatter-story .step.is-active {
+  border-left-color: var(--color-accent);
+  color: CanvasText;
+  background: color-mix(in oklch, var(--color-accent) 18%, Canvas);
+}
+
+.step-number {
+  margin-bottom: 0.3em;
+  color: oklch(55% 3% 200);
+  font-size: 0.85em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+#scatter-story h3 {
+  margin-top: 0;
+}
+
+#files {
+  display: grid;
+  grid-template-columns: minmax(12em, 1fr) 4fr;
+  gap: 0.5em 1.5em;
+}
+
+#files > div {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  padding-block: 0.5em;
+  border-bottom: 1px solid oklch(50% 10% 200 / 20%);
+}
+
+#files dt {
+  grid-column: 1;
+  overflow-wrap: anywhere;
+}
+
+#files dt small {
+  display: block;
+  margin-top: 0.25em;
+  opacity: 0.65;
+}
+
+#files dd {
+  display: flex;
+  grid-column: 2;
+  flex-wrap: wrap;
+  align-content: start;
+  align-items: start;
+  gap: 0.15em;
+  margin-left: 0;
+  padding-top: 0.35em;
+}
+
+.loc {
+  width: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color, steelblue);
+  transition: 200ms;
+
+  @starting-style {
+    scale: 0;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  #scrolly-1 {
+    display: block;
+  }
+
+  #scatter-plot {
+    position: relative;
+    top: auto;
+    height: auto;
+  }
+
+  #scatter-story .step {
+    min-height: auto;
+    margin-block: 1em;
+  }
+
+  #files {
+    grid-template-columns: 1fr;
+  }
+
+  #files > div {
+    display: block;
+  }
+
+  #files dd {
+    margin-top: 0.5em;
+  }
 }

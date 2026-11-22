@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bikewatching - Boston Bike Traffic Explorer",
+    "year": 2026,
+    "image": "images/bikewatching-preview.svg",
+    "description": "Built an interactive Mapbox and D3 visualization of Boston-area bike lanes and Bluebike station traffic, with time filtering, proportional markers, and directional flow colors.",
+    "url": "https://abaghyangor.github.io/bikewatching/"
+  },
+  {
     "title": "Personal Portfolio Foundation",
     "year": 2026,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
