@@ -371,9 +371,11 @@ function renderStory(containerSelector, commitData) {
   });
 }
 
-function updateVisualization(progress) {
+function updateVisualization(progress, maxTime) {
   commitProgress = Math.max(0, Math.min(100, Number(progress)));
-  commitMaxTime = timeScale.invert(commitProgress);
+  // Use the exact commit time when scrolling, so float round-off in
+  // timeScale.invert() never drops the commit the step describes.
+  commitMaxTime = maxTime ?? timeScale.invert(commitProgress);
   filteredCommits = commits.filter((commit) => commit.datetime <= commitMaxTime);
 
   document.getElementById('commit-progress').value = Math.round(commitProgress);
@@ -394,7 +396,7 @@ function onTimeSliderChange(event) {
 
 function onStepEnter(response) {
   const commit = response.element.__data__;
-  updateVisualization(timeScale(commit.datetime));
+  updateVisualization(timeScale(commit.datetime), commit.datetime);
   d3.selectAll('#scatter-story .step').classed(
     'is-active',
     (item) => item.id === commit.id,
