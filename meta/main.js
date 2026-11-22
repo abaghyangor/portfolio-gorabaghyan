@@ -347,9 +347,9 @@ function updateFileDisplay(commitData) {
     .style('--color', (line) => colors(line.type));
 }
 
-function renderStory(commitData) {
+function renderStory(containerSelector, commitData) {
   const steps = d3
-    .select('#scatter-story')
+    .select(containerSelector)
     .selectAll('.step')
     .data(commitData, (commit) => commit.id)
     .join('article')
@@ -401,6 +401,16 @@ function onStepEnter(response) {
   );
 }
 
+function onFileStepEnter(response) {
+  const commit = response.element.__data__;
+  const fileCommits = commits.filter((item) => item.datetime <= commit.datetime);
+  updateFileDisplay(fileCommits);
+  d3.selectAll('#files-story .step').classed(
+    'is-active',
+    (item) => item.id === commit.id,
+  );
+}
+
 const data = await loadData();
 commits = processCommits(data);
 filteredCommits = commits;
@@ -410,7 +420,8 @@ timeScale = d3
   .range([0, 100]);
 
 renderScatterPlot(commits);
-renderStory(commits);
+renderStory('#scatter-story', commits);
+renderStory('#files-story', commits);
 updateVisualization(commitProgress);
 
 document
@@ -426,4 +437,16 @@ scroller
   })
   .onStepEnter(onStepEnter);
 
-window.addEventListener('resize', () => scroller.resize());
+const fileScroller = scrollama();
+fileScroller
+  .setup({
+    container: '#scrolly-2',
+    step: '#scrolly-2 .step',
+    offset: 0.5,
+  })
+  .onStepEnter(onFileStepEnter);
+
+window.addEventListener('resize', () => {
+  scroller.resize();
+  fileScroller.resize();
+});

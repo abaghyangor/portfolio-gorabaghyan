@@ -50,9 +50,15 @@
         <h2 id="files-heading">The race for the biggest file</h2>
         <p>
             Each dot represents one line in the filtered codebase. Colors distinguish
-            the technologies used in each file.
+            the technologies used in each file. Scroll through the story to watch the
+            files grow over time.
         </p>
-        <dl id="files" aria-live="polite"></dl>
+        <div id="scrolly-2">
+            <div id="files-plot">
+                <dl id="files" aria-live="polite"></dl>
+            </div>
+            <div id="files-story" aria-label="File growth narrative"></div>
+        </div>
     </section>
 
     <dl id="commit-tooltip" class="info tooltip" hidden>

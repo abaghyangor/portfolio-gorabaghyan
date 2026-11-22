@@ -437,7 +437,8 @@ dl.info[hidden]:not(:hover, :focus-within) {
   font-weight: 700;
 }
 
-#scrolly-1 {
+#scrolly-1,
+#scrolly-2 {
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -445,26 +446,36 @@ dl.info[hidden]:not(:hover, :focus-within) {
 }
 
 #scatter-story,
-#scatter-plot {
+#scatter-plot,
+#files-story,
+#files-plot {
   flex: 1;
   min-width: 0;
 }
 
-#scatter-story {
+#scatter-story,
+#files-story {
   position: relative;
 }
 
-#scatter-plot {
+#scatter-plot,
+#files-plot {
   position: sticky;
   top: 1rem;
   height: 72vh;
+}
+
+#files-plot {
+  overflow: auto;
+  padding-right: 0.5em;
 }
 
 #scatter-plot #chart {
   margin-top: 0;
 }
 
-#scatter-story .step {
+#scatter-story .step,
+#files-story .step {
   box-sizing: border-box;
   min-height: 65vh;
   margin-bottom: 1rem;
@@ -475,7 +486,8 @@ dl.info[hidden]:not(:hover, :focus-within) {
   transition: 200ms;
 }
 
-#scatter-story .step.is-active {
+#scatter-story .step.is-active,
+#files-story .step.is-active {
   border-left-color: var(--color-accent);
   color: CanvasText;
   background: color-mix(in oklch, var(--color-accent) 18%, Canvas);
@@ -490,7 +502,8 @@ dl.info[hidden]:not(:hover, :focus-within) {
   text-transform: uppercase;
 }
 
-#scatter-story h3 {
+#scatter-story h3,
+#files-story h3 {
   margin-top: 0;
 }
 
@@ -544,17 +557,20 @@ dl.info[hidden]:not(:hover, :focus-within) {
 }
 
 @media (max-width: 800px) {
-  #scrolly-1 {
+  #scrolly-1,
+  #scrolly-2 {
     display: block;
   }
 
-  #scatter-plot {
+  #scatter-plot,
+  #files-plot {
     position: relative;
     top: auto;
     height: auto;
   }
 
-  #scatter-story .step {
+  #scatter-story .step,
+  #files-story .step {
     min-height: auto;
     margin-block: 1em;
   }
